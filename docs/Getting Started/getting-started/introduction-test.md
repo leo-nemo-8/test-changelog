@@ -13,7 +13,7 @@ Discover the prerequisites, a step-by-step guide to create an app push campaign,
   Integrate Netcore SDK in your application. Refer [here](https://cedocs.netcorecloud.com/docs/app) to integrate App SDK into your application
 </Callout>
 
-# Steps to Create App Push
+# Steps to Create App Push test rev
 
 Follow the steps to create an App push campaign.
 
@@ -258,7 +258,7 @@ Refer to the table below to learn about all the options available to customize y
       </td>
 
       <td>
-        A notification that stays visible until the user clicks \<image src="https\://files.readme.io/5343df9db6f0b2467c723c746a5a51bf90fe5e23ebef3dea6f9b997632f91a18-CloseButton.png" style="display:inline-block; margin:0; padding:0; width:20px; height:auto;">\<image> button. It cannot be removed by swiping or using the **Clear All** option in the notification tray.
+        A notification that stays visible until the user clicks \<image src="[https://files.readme.io/5343df9db6f0b2467c723c746a5a51bf90fe5e23ebef3dea6f9b997632f91a18-CloseButton.png](https://files.readme.io/5343df9db6f0b2467c723c746a5a51bf90fe5e23ebef3dea6f9b997632f91a18-CloseButton.png)" style="display:inline-block; margin:0; padding:0; width:20px; height:auto;">\<image> button. It cannot be removed by swiping or using the **Clear All** option in the notification tray.
 
         **Note**: The notification can be dismissed if the user's device has Android 14 or later installed. For more details, refer to the [official Android update](https://developer.android.com/about/versions/14/behavior-changes-all#non-dismissable-notifications).
       </td>
