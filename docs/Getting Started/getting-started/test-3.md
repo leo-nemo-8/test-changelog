@@ -7,10 +7,6 @@ metadata:
 ---
 <br />
 
-<Callout icon="📘" theme="info">
-  ffffff
-</Callout>
-
 The Account Hosted Widget enables you to embed Cleeng’s account management flow directly into your web application. It allows users to update their account details and manage their subscriptions, ensuring secure handling of personal and billing information.
 
 <Callout icon="📘" theme="info">
@@ -19,7 +15,7 @@ The Account Hosted Widget enables you to embed Cleeng’s account management flo
 
 ## Prerequisites
 
-Before you begin, make sure you have:
+Before you begin, make sure you&#x20;
 
 1. **Cleeng account**: <Anchor target="_blank" href="https://srm.cleeng.com/register">Create a Cleeng account</Anchor>.
 2. **At least one offer created** in the Cleeng dashboard: <Anchor target="_blank" href="https://publisher.support.cleeng.com/hc/en-us/articles/360012552919-What-is-a-Cleeng-offer">Learn more about Cleeng offers</Anchor>.
