@@ -6,7 +6,7 @@ metadata:
   robots: index
 ---
 <Callout icon="📘" theme="info">
-  ### Heading&#x20;
+  ### Heading
 
   Review mode test
 </Callout>
