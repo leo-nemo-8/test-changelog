@@ -12,5 +12,10 @@ metadata:
 
 <Accordion title="Test" icon="fa-info-circle">
   - test 1
+    - test 2
+</Accordion>
+
+<Accordion title="test" icon="fa-info-circle">
+  - test
   - test 2
 </Accordion>
