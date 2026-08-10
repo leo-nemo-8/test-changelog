@@ -1,5 +1,5 @@
 ---
-title: test sync
+title: test sync test
 deprecated: false
 hidden: false
 metadata:
