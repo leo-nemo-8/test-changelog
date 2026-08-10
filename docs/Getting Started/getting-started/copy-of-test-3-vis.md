@@ -10,7 +10,7 @@ Discover the prerequisites, a step-by-step guide to create an app push campaign,
 <Callout icon="📘" theme="info">
   ### Prerequisites
 
-  Integrate Netcore SDK in your application. Refer [here](https://cedocs.netcorecloud.com/docs/app) to integrate App SDK into your application
+  Integrate Netcore SDK in your application. Refer [here](https://leotest-gtwu.readme.io/update/docs/test-react) to integrate App SDK into your application
 </Callout>
 
 # Steps to Create App Push
