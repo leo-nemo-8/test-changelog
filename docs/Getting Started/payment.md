@@ -103,12 +103,12 @@ sequenceDiagram
     %% Participants
     actor User as User
 
-    box rgb(249, 249, 249) Merchant Side
+    box Merchant Side #f9f9f9
         participant App as Merchant Web
         participant Backend as Merchant Server
     end
 
-    box rgb(225, 245, 254) RedotPay Connect
+    box RedotPay Connect #e1f5fe
         participant API as Open-API
         participant DApp as RedotPay / Third-party Apps
     end
@@ -124,8 +124,8 @@ sequenceDiagram
     %% Phase 2: Payment Order Creation
     rect rgb(240, 248, 255)
         note over Backend, API: Phase 2: Payment Order Creation
-        Backend->>API: 4. Create Payment Order<br/>(/openapi/v2/order/create)
-        API-->>Backend: 5. Return Payment SN<br/>+ Supported Payment Method(manual flag included)
+        Backend->>API: 4. Create Payment Order - /openapi/v2/order/create
+        API-->>Backend: 5. Return Payment SN and supported payment methods
     end
 
     %% Phase 3: Payment Info Handling
@@ -133,11 +133,11 @@ sequenceDiagram
         note over Backend, App: Phase 3: Payment Info Handling
 
         alt manual = true (Manual Get Payment Method Required)
-            Backend->>API: 6. Get Payment Methods<br/>(/openapi/v2/order/payment-method)
-            API-->>Backend: 7. Return Payment Info<br/>(Url / QRCode)
+            Backend->>API: 6. Get Payment Methods - /openapi/v2/order/payment-method
+            API-->>Backend: 7. Return Payment Info - URL or QR code
             Backend->>App: 8. Return Payment Info
         else manual = false
-            Backend->>App: 6. Return Payment Info<br/>(From Create Order Response)
+            Backend->>App: 6. Return Payment Info from create-order response
         end
     end
 
@@ -145,7 +145,7 @@ sequenceDiagram
     rect rgb(255, 250, 240)
         note over App, User: Phase 4: Payment Execution
         App->>User: 9. Display QR Code OR Deeplink Button
-        User->>DApp: 10. Open DApp<br/>(Scan QR or Open Deeplink)
+        User->>DApp: 10. Open DApp - Scan QR code or open Deeplink
         User->>DApp: 11. Complete Payment
     end
 
