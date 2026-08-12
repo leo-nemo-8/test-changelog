@@ -103,12 +103,12 @@ sequenceDiagram
     %% Participants
     actor User as User
 
-    box Merchant Side #f9f9f9
+    box rgb(249, 249, 249) Merchant Side
         participant App as Merchant Web
         participant Backend as Merchant Server
     end
 
-    box RedotPay Connect #e1f5fe
+    box rgb(225, 245, 254) RedotPay Connect
         participant API as Open-API
         participant DApp as RedotPay / Third-party Apps
     end
