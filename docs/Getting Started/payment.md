@@ -33,29 +33,37 @@ This is a standard redirect payment model, ideal for quick integration. The user
 sequenceDiagram
     autonumber
     participant User as User
-    participant App as Merchant Web
-    participant Backend as Merchant Server
-    participant API as Open-API
-    participant SDK as Payment Page
-
-    Note over User,Backend: Phase 1: User Places Order on Merchant Side
-    User->>App: User places an order
-    App->>Backend: Submit order information
-    Backend->>Backend: Create merchant order
-
-    Note over Backend,API: Phase 2: Payment Order Creation
-    Backend->>API: Create payment order
-    API->>Backend: Return payment SN and payment link
-
-    Note over App,User: Phase 3: Payment Execution
-    Backend->>App: Return payment SN and payment link
-    App->>SDK: Redirect to payment page
-    SDK->>User: Display payment interface
-    User->>SDK: Complete payment
-    SDK-->>App: Return to merchant
-
-    Note over API,Backend: Phase 4: Payment Result Notification
-    API-->>Backend: Payment result callback
+    box rgb(249, 249, 249) Merchant Side
+        participant App as Merchant Web
+        participant Backend as Merchant Server
+    end
+    box rgb(225, 245, 254) RedotPay Connect
+        participant API as Open-API
+        participant SDK as Payment Page
+    end
+    rect rgb(245, 255, 250)
+        note over User, Backend: Phase 1: User Places Order on Merchant Side
+        User->>App: User Place an Order
+        App->>Backend: Submit Order Information
+        Backend->>Backend: Create Merchant Order
+    end
+    rect rgb(240, 248, 255)
+        note over Backend, API: Phase 2: Payment Order Creation
+        Backend->>API: Create Payment Order (/openapi/v2/order/create)
+        API->>Backend: Return Payment Order SN and Payment link
+    end
+    rect rgb(255, 250, 240)
+        note over App, User: Phase 3: Payment Execution
+        Backend->>App: Return Payment Order SN and Payment link
+        App->>SDK: Redirect to Payment Page
+        SDK->>User: Display Payment Interface
+        User->>SDK: Complete Payment
+        SDK-->>App: Return To Merchant
+    end
+    rect rgb(255, 245, 238)
+        note over API, Backend: Phase 4: Payment Result Notification
+        API-->>Backend: Payment Result Callback
+    end
 ```
 
 **Participants:**
@@ -91,37 +99,62 @@ This flexible integration gives the merchant full control over displaying paymen
 ```mermaid
 sequenceDiagram
     autonumber
-    participant User as User
-    participant App as Merchant Web
-    participant Backend as Merchant Server
-    participant API as Open-API
-    participant DApp as RedotPay or third-party app
 
-    Note over User,Backend: Phase 1: User Places Order on Merchant Side
-    User->>App: User places an order
-    App->>Backend: Submit order information
-    Backend->>Backend: Create merchant order
+    %% Participants
+    actor User as User
 
-    Note over Backend,API: Phase 2: Payment Order Creation
-    Backend->>API: Create payment order
-    API-->>Backend: Return payment SN and supported methods
-
-    Note over Backend,App: Phase 3: Payment Information Handling
-    alt manual = true
-        Backend->>API: Get payment methods
-        API-->>Backend: Return payment URL or QR code
-        Backend->>App: Return payment information
-    else manual = false
-        Backend->>App: Return payment information from create-order response
+    box rgb(249, 249, 249) Merchant Side
+        participant App as Merchant Web
+        participant Backend as Merchant Server
     end
 
-    Note over App,User: Phase 4: Payment Execution
-    App->>User: Display QR code or Deeplink button
-    User->>DApp: Open DApp
-    User->>DApp: Complete payment
+    box rgb(225, 245, 254) RedotPay Connect
+        participant API as Open-API
+        participant DApp as RedotPay / Third-party Apps
+    end
 
-    Note over API,Backend: Phase 5: Payment Result Notification
-    API-->>Backend: Payment result callback
+    %% Phase 1: User Places Order
+    rect rgb(245, 255, 250)
+        note over User, Backend: Phase 1: User Places Order on Merchant Side
+        User->>App: 1. User Places an Order
+        App->>Backend: 2. Submit Order Information
+        Backend->>Backend: 3. Create Merchant Order
+    end
+
+    %% Phase 2: Payment Order Creation
+    rect rgb(240, 248, 255)
+        note over Backend, API: Phase 2: Payment Order Creation
+        Backend->>API: 4. Create Payment Order<br/>(/openapi/v2/order/create)
+        API-->>Backend: 5. Return Payment SN<br/>+ Supported Payment Method(manual flag included)
+    end
+
+    %% Phase 3: Payment Info Handling
+    rect rgb(255, 250, 240)
+        note over Backend, App: Phase 3: Payment Info Handling
+
+        alt manual = true (Manual Get Payment Method Required)
+            Backend->>API: 6. Get Payment Methods<br/>(/openapi/v2/order/payment-method)
+            API-->>Backend: 7. Return Payment Info<br/>(Url / QRCode)
+            Backend->>App: 8. Return Payment Info
+        else manual = false
+            Backend->>App: 6. Return Payment Info<br/>(From Create Order Response)
+        end
+    end
+
+    %% Phase 4: Payment Execution
+    rect rgb(255, 250, 240)
+        note over App, User: Phase 4: Payment Execution
+        App->>User: 9. Display QR Code OR Deeplink Button
+        User->>DApp: 10. Open DApp<br/>(Scan QR or Open Deeplink)
+        User->>DApp: 11. Complete Payment
+    end
+
+    %% Phase 5: Payment Result Notification
+    rect rgb(255, 245, 238)
+        note over API, Backend: Phase 5: Payment Result Notification
+        API-->>Backend: 12. Payment Result Callback
+    end
+
 ```
 
 **Participants:**
