@@ -2,11 +2,7 @@
 title: Welcome to LeoTest
 hidden: false
 ---
-<Callout icon="📘" theme="info">
-  ### test
-
-  **Template:**  Delete this callout and edit this page with your content and links.
-</Callout>
+<LandingPage />
 
 <Cards>
   <Card title="Quick Start" href="#" icon="fa-duotone fa-rocket-launch">
@@ -19,26 +15,6 @@ hidden: false
 
   <Card title="Build with AI" href="#" icon="fa-duotone fa-sparkles">
     Use LLM features to automate your workflow
-  </Card>
-</Cards>
-
-<Callout icon="📘" theme="info">
-  fjdjfjdfdjslfjsdlkjflksdf
-</Callout>
-
-## Recent Releases
-
-<Cards>
-  <Card title="v2.0 Migration" href="#" icon="fa-duotone fa-magnifying-glass" kind="tile">
-    Everything you need to upgrade
-  </Card>
-
-  <Card title="Webhooks" href="#" icon="fa-duotone fa-bullhorn" kind="tile">
-    Real-time events are now available
-  </Card>
-
-  <Card title="Android SDK" href="#" icon="fa-duotone fa-robot" kind="tile">
-    Our native Android library is out of beta
   </Card>
 </Cards>
 
