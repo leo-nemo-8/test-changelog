@@ -26,60 +26,56 @@ title: Test
 \*{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
 
-body{
+body\{
 ckground:var(--paper);
 lor:var(--ink);
 nt-family:'IBM Plex Sans', sans-serif;
 ebkit-font-smoothing:antialiased;
 
-
 a{ color:inherit; text-decoration:none; }
-a:focus-visible, button:focus-visible{
+a:focus-visible, button:focus-visible\{
 
+<br />
 
-
-
+<br />
 
 .mono{ font-family:'IBM Plex Mono', monospace; }
 
-.wrap{
+.wrap\{
 -width:1080px;
 gin:0 auto;
 ding:0 24px;
 
-
 / _---------- top bar ----------_ /
-header{
+header\{
 er-bottom:1px solid var(--line);
 
-.topbar{
+.topbar\{
 ay:flex;
 -items:center;
 fy-content:space-between;
 ng:20px 0;
 
-.logo-container {
+.logo-container \{
 
 nter;
 
-
-.custom-logo {
+.custom-logo \{
 ;
 
 contain;
 
-.wordmark{
+.wordmark\{
 mily:'Space Grotesk', sans-serif;
 ight:700;
 ze:18px;
 spacing:0.01em;
 
 .wordmark span{ color:var(--brand); }
-nav.toplinks{
+nav.toplinks\{
 ex;
 
-
-nav.toplinks a{
+nav.toplinks a\{
 px;
 muted);
 olor .15s ease;
@@ -87,42 +83,38 @@ olor .15s ease;
 nav.toplinks a:hover{ color:var(--ink); }
 
 @media (max-width:640px){
-none; }
 
 
 / _---------- hero ----------_ /
-.hero{
+.hero\{
 ition:relative;
 ding:88px 0 56px;
 rflow:hidden;
 
-.hero::before{
+.hero::before\{
 
 solute;
-:-20%;
-
+\:-20%;
 
 linear-gradient(90deg, transparent, var(--brand) 40%, transparent);
 ;
 weep 7s linear infinite;
 
 @keyframes sweep{
-translateX(0); }
-m:translateX(220%); }
+
+m:translateX(220%); \}
 
 @media (prefers-reduced-motion:reduce){
-ay:none; }
 
 
-.eyebrow{
+.eyebrow\{
 ize:12px;
 -spacing:.14em;
 var(--brand);
 eight:500;
 -bottom:18px;
 
-
-h1{
+h1\{
 font-family:'Space Grotesk', sans-serif;
 font-weight:600;
 font-size:clamp(34px, 5vw, 52px);
@@ -131,41 +123,39 @@ letter-spacing:-0.01em;
 margin:0 0 20px;
 max-width:16ch;
 
-
-.lede{
+.lede\{
 t-size:17px;
 e-height:1.55;
 or:var(--muted);
 -width:46ch;
 gin:0 0 32px;
 
-
-.cta-row{
+.cta-row\{
 y:flex;
 px;
 rap:wrap;
 -bottom:56px;
 
-.btn{
+.btn\{
 nt-size:14px;
 nt-weight:500;
 dding:11px 20px;
 rder-radius:6px;
 ansition:transform .15s ease, background .15s ease, border-color .15s ease;
 
-.btn-primary{
+.btn-primary\{
 :var(--ink);
---paper);
+\--paper);
 
 .btn-primary:hover{ background:var(--brand); transform:translateY(-1px); }
-.btn-secondary{
+.btn-secondary\{
 olid var(--line);
 ink);
 
 .btn-secondary:hover{ border-color:var(--ink); transform:translateY(-1px); }
 
 / _---------- status ledger ----------_ /
-.ledger{
+.ledger\{
 ay:flex;
 wrap:wrap;
 8px;
@@ -175,13 +165,13 @@ r:1px solid var(--line);
 r-radius:8px;
 size:13px;
 
-.ledger-item{
+.ledger-item\{
 ex;
 s:center;
 
---muted);
+\--muted);
 
-.dot{
+.dot\{
 dth:7px; height:7px;
 rder-radius:50%;
 ckground:var(--signal);
@@ -191,11 +181,11 @@ ex-shrink:0;
 .ledger-item b{ color:var(--ink); font-weight:500; }
 
 / _---------- grid ----------_ /
-.section{
+.section\{
 g:64px 0 96px;
 -top:1px solid var(--line);
 
-.grid{
+.grid\{
 play:grid;
 d-template-columns:1fr 1fr;
 :1px;
@@ -205,10 +195,9 @@ der-radius:10px;
 rflow:hidden;
 
 @media (max-width:720px){
-olumns:1fr; }
 
 
-.card{
+.card\{
 kground:var(--panel);
 ding:32px;
 play:flex;
@@ -218,48 +207,46 @@ nsition:background .15s ease;
 
 .card:hover{ background:#FBFCFE; }
 
-.card-icon {
+.card-icon \{
 x;
 px;
 t:contain;
 
-
-.card-label{
+.card-label\{
 :11px;
 acing:.1em;
 (--brand);
 ht:500;
 
-.card h2{
+.card h2\{
 amily:'Space Grotesk', sans-serif;
 ize:20px;
 eight:600;
 :0;
 
-.card p{
+.card p\{
 size:14.5px;
 height:1.55;
 :var(--muted);
 n:0;
 grow:1;
 
-.card-link{
+.card-link\{
 e:14px;
 ght:500;
 r(--ink);
 inline-flex;
 ems:center;
 
-
 .card-link .arrow{ transition:transform .15s ease; }
 .card:hover .card-link .arrow{ transform:translateX(3px); }
 
 / _---------- footer ----------_ /
-footer{
+footer\{
 er-top:1px solid var(--line);
 ing:28px 0;
 
-.footrow{
+.footrow\{
 y:flex;
 y-content:space-between;
 items:center;
