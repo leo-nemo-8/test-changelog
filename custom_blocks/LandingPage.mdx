@@ -1,0 +1,260 @@
+---
+name: LandingPage
+---
+export const LandingPageDemo = () => {
+  const styles = {
+    page: {
+      color: '#e5e7eb',
+      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      overflow: 'hidden',
+    },
+    hero: {
+      position: 'relative',
+      padding: '72px 32px',
+      borderRadius: '20px',
+      overflow: 'hidden',
+      background:
+        'linear-gradient(135deg, #111827 0%, #1e1b4b 45%, #312e81 100%)',
+      boxShadow: '0 24px 60px rgba(30, 27, 75, 0.25)',
+    },
+    glowOne: {
+      position: 'absolute',
+      top: '-120px',
+      right: '-80px',
+      width: '300px',
+      height: '300px',
+      borderRadius: '999px',
+      background: 'rgba(129, 140, 248, 0.35)',
+      filter: 'blur(20px)',
+    },
+    glowTwo: {
+      position: 'absolute',
+      bottom: '-140px',
+      left: '-80px',
+      width: '280px',
+      height: '280px',
+      borderRadius: '999px',
+      background: 'rgba(34, 211, 238, 0.22)',
+      filter: 'blur(20px)',
+    },
+    content: {
+      position: 'relative',
+      maxWidth: '760px',
+      zIndex: 1,
+    },
+    badge: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '8px',
+      padding: '8px 12px',
+      border: '1px solid rgba(255,255,255,0.2)',
+      borderRadius: '999px',
+      background: 'rgba(255,255,255,0.1)',
+      color: '#c7d2fe',
+      fontSize: '14px',
+      fontWeight: 600,
+    },
+    title: {
+      margin: '20px 0 16px',
+      color: '#ffffff',
+      fontSize: 'clamp(36px, 6vw, 64px)',
+      lineHeight: 1.05,
+      letterSpacing: '-0.04em',
+    },
+    description: {
+      maxWidth: '620px',
+      margin: 0,
+      color: '#d1d5db',
+      fontSize: '18px',
+      lineHeight: 1.65,
+    },
+    actions: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '12px',
+      marginTop: '28px',
+    },
+    primaryButton: {
+      display: 'inline-block',
+      padding: '13px 18px',
+      borderRadius: '10px',
+      background: '#ffffff',
+      color: '#312e81',
+      fontSize: '15px',
+      fontWeight: 700,
+      textDecoration: 'none',
+    },
+    secondaryButton: {
+      display: 'inline-block',
+      padding: '13px 18px',
+      border: '1px solid rgba(255,255,255,0.24)',
+      borderRadius: '10px',
+      color: '#ffffff',
+      fontSize: '15px',
+      fontWeight: 700,
+      textDecoration: 'none',
+    },
+    section: {
+      marginTop: '56px',
+    },
+    sectionTitle: {
+      margin: '0 0 8px',
+      color: '#111827',
+      fontSize: '28px',
+      letterSpacing: '-0.02em',
+    },
+    sectionDescription: {
+      margin: '0 0 24px',
+      color: '#4b5563',
+      fontSize: '16px',
+      lineHeight: 1.6,
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+      gap: '16px',
+    },
+    card: {
+      padding: '24px',
+      border: '1px solid #e5e7eb',
+      borderRadius: '14px',
+      background: '#ffffff',
+      boxShadow: '0 4px 16px rgba(15, 23, 42, 0.06)',
+    },
+    icon: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '42px',
+      height: '42px',
+      borderRadius: '10px',
+      background: '#eef2ff',
+      color: '#4338ca',
+      fontSize: '20px',
+    },
+    cardTitle: {
+      margin: '16px 0 8px',
+      color: '#111827',
+      fontSize: '18px',
+    },
+    cardText: {
+      margin: 0,
+      color: '#6b7280',
+      fontSize: '14px',
+      lineHeight: 1.6,
+    },
+    cardLink: {
+      display: 'inline-block',
+      marginTop: '16px',
+      color: '#4f46e5',
+      fontSize: '14px',
+      fontWeight: 700,
+      textDecoration: 'none',
+    },
+    footer: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      gap: '16px',
+      marginTop: '56px',
+      padding: '24px 0',
+      borderTop: '1px solid #e5e7eb',
+      color: '#6b7280',
+      fontSize: '14px',
+    },
+  };
+
+  const cards = [
+    {
+      icon: '🚀',
+      title: 'Get started',
+      description: 'Set up your first integration and make your first API request.',
+      href: '/docs/getting-started',
+    },
+    {
+      icon: '⌘',
+      title: 'API Reference',
+      description: 'Browse endpoints, parameters, authentication, and response schemas.',
+      href: '/reference',
+    },
+    {
+      icon: '🔐',
+      title: 'Authentication',
+      description: 'Learn how to create and use credentials securely.',
+      href: '/docs/authentication',
+    },
+    {
+      icon: '💬',
+      title: 'Get support',
+      description: 'Find answers, troubleshoot common issues, or contact the team.',
+      href: 'mailto:support@example.com',
+    },
+  ];
+
+  return (
+    <div style={styles.page}>
+      <section style={styles.hero}>
+        <div style={styles.glowOne} />
+        <div style={styles.glowTwo} />
+
+        <div style={styles.content}>
+          <span style={styles.badge}>✦ Developer documentation</span>
+
+          <h1 style={styles.title}>
+            Build faster with clear, practical API documentation.
+          </h1>
+
+          <p style={styles.description}>
+            Explore guides, API reference material, and integration resources
+            designed to help you ship with confidence.
+          </p>
+
+          <div style={styles.actions}>
+            <a href="/docs/getting-started" style={styles.primaryButton}>
+              Start building →
+            </a>
+
+            <a href="/reference" style={styles.secondaryButton}>
+              Explore the API
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section style={styles.section}>
+        <h2 style={styles.sectionTitle}>Everything you need to integrate</h2>
+
+        <p style={styles.sectionDescription}>
+          Start with the path that best matches your current task.
+        </p>
+
+        <div style={styles.grid}>
+          {cards.map(card => (
+            <a
+              href={card.href}
+              key={card.title}
+              style={{ ...styles.card, textDecoration: 'none' }}
+            >
+              <div style={styles.icon}>{card.icon}</div>
+              <h3 style={styles.cardTitle}>{card.title}</h3>
+              <p style={styles.cardText}>{card.description}</p>
+              <span style={styles.cardLink}>Open documentation →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <footer style={styles.footer}>
+        <span>Need help? Contact your support team.</span>
+        <a
+          href="/docs"
+          style={{ color: '#4f46e5', fontWeight: 700, textDecoration: 'none' }}
+        >
+          Browse all guides →
+        </a>
+      </footer>
+    </div>
+  );
+};
+
+<LandingPageDemo />
