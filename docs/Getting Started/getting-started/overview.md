@@ -6,6 +6,8 @@ metadata:
   robots: index
 ---
 
+<div className="overview-api-cards">
+
 <Cards columns="3">
   <Card title="REST APIs">
     <br />Manage:
@@ -73,3 +75,5 @@ metadata:
 <a class="btn-primary" href="https://dev.cleverbridge.com/docs/third-party-integrations#/" target="_blank">Learn more</a>
   </Card>
 </Cards>
+
+</div>
