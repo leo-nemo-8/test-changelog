@@ -1,0 +1,126 @@
+---
+name: CardsCleverBridge
+---
+export const ApiOverviewCards = () => {
+  const cards = [
+    {
+      title: 'REST APIs',
+      intro: 'Manage:',
+      items: ['Subscriptions', 'Purchases', 'Pricing', 'Links'],
+      href: 'https://dev.cleverbridge.com/docs/get-started-backend-rest-apis#/',
+    },
+    {
+      title: 'Pricing API',
+      intro: 'Retrieve:',
+      items: ['Product', 'Price', 'Promotions', 'Geo IP data'],
+      href: 'https://dev.cleverbridge.com/docs/get-started-web-rest-apis#/',
+    },
+    {
+      title: 'License Key',
+      intro: 'Create:',
+      items: ['Customized licensing information at the time of purchase.'],
+      href: 'https://dev.cleverbridge.com/docs/key-generator#/',
+    },
+    {
+      title: 'GraphQL API',
+      intro: 'Manage:',
+      items: ['Products', 'Prices', 'Promotions'],
+      href: 'https://dev.cleverbridge.com/docs/graph-ql-get-started#/',
+    },
+    {
+      title: 'Notifications',
+      intro: 'Handle:',
+      items: ['Orders', 'Payments', 'Subscriptions'],
+      href: 'https://dev.cleverbridge.com/docs/notifications-overview#/',
+    },
+    {
+      title: 'Integrations',
+      intro: 'Add capabilities:',
+      items: ['Salesforce', 'GTM', 'Partnerize'],
+      href: 'https://dev.cleverbridge.com/docs/third-party-integrations#/',
+    },
+  ];
+
+  const styles = {
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gap: '20px',
+      margin: '24px 0',
+    },
+    card: {
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '270px',
+      padding: '28px',
+      backgroundColor: '#000000',
+      border: '1px solid #262626',
+      borderRadius: '14px',
+      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.16)',
+    },
+    title: {
+      margin: '0 0 18px',
+      color: '#f3f4f6',
+      fontSize: '24px',
+      fontWeight: 700,
+      lineHeight: 1.25,
+    },
+    intro: {
+      margin: '0 0 8px',
+      color: '#ffffff',
+      fontSize: '16px',
+      fontWeight: 600,
+    },
+    list: {
+      margin: '0 0 24px',
+      paddingLeft: '20px',
+      color: '#ffffff',
+      fontSize: '16px',
+      lineHeight: 1.7,
+    },
+    button: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 'fit-content',
+      marginTop: 'auto',
+      padding: '12px 20px',
+      borderRadius: '8px',
+      backgroundColor: '#ffffff',
+      color: '#000000',
+      fontSize: '15px',
+      fontWeight: 700,
+      lineHeight: 1,
+      textDecoration: 'none',
+    },
+  };
+
+  return (
+    <div style={styles.grid}>
+      {cards.map(card => (
+        <section key={card.title} style={styles.card}>
+          <h2 style={styles.title}>{card.title}</h2>
+
+          <p style={styles.intro}>{card.intro}</p>
+
+          <ul style={styles.list}>
+            {card.items.map(item => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+
+          <a
+            href={card.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.button}
+          >
+            Learn more →
+          </a>
+        </section>
+      ))}
+    </div>
+  );
+};
+
+<ApiOverviewCards />
