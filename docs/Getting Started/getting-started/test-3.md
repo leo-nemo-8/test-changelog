@@ -24,4 +24,4 @@ Before you begin, make sure you&#x20;
    - **Enabled by default**: Card, Google Pay, Apple Pay (Apple Pay requires domain verification before it can be used in production. See [4. Apple Pay production environment setup](https://developers.cleeng.com/docs/checkout-hosted-widget#4-apple-pay-production-environment-setup))
    - **To add PayPal, iDEAL, and GCash**: <Anchor target="_blank" href="https://publisher.support.cleeng.com/hc/en-us/requests/new">Contact Support</Anchor> to activate these payment methods.
 
-<br />
+<iframe src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FPHUVfvLbJ-M%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DPHUVfvLbJ-M&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPHUVfvLbJ-M%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" title="YouTube {user.LB}" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen={true}></iframe>
