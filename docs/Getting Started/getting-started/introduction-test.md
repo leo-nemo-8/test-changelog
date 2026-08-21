@@ -526,4 +526,4 @@ Refer to the table below for details on the sections under **Schedule campaign**
 
 8. Click the **Preview** option to save your campaign and preview the app push. Once you have checked the details and appearance of your entire app push, click **Save & Publish** to publish it.
 
-<br />
+<Embed title="" typeOfEmbed="iframe" url="https://www.youtube.com/watch?v=vMLk_T0PPbk&list=RDvMLk_T0PPbk&start_radio=1" />
