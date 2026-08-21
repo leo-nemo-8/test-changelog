@@ -20,5 +20,4 @@ metadata:
     - test 2
 </Accordion>
 
-- test
-- test 2
+<Embed title="" typeOfEmbed="iframe" url="https://www.wikipedia.org/" />
