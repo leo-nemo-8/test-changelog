@@ -1,7 +1,7 @@
 ---
 title: mange users
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
