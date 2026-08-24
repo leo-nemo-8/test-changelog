@@ -47,5 +47,3 @@ hidden: false
     Connect to a storage provider
   </Card>
 </Cards>
-
-![](https://files.readme.io/c9a6c2b2b51cd6364ba2182aef3f95e00f2664b7d97f8d21feedad9b11215e10-__.png)
