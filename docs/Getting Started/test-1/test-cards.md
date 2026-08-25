@@ -273,8 +273,7 @@ This functionality helps enforce role-based data visibility, which is particular
 
 A regional marketing manager for France is assigned a role with a user property filter where `Country = France`. Even when viewing "All Users" reports, the manager will only see data related to users in France. Information from other regions remains inaccessible.
 
-</details>
-
+<details>
 <summary><strong>Example 2: Segment-Based Access</strong></summary>
 
 A custom role is restricted to:
