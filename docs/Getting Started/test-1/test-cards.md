@@ -297,6 +297,8 @@ This ensures that the user can only access data for a specified user base, even 
   You _cannot assign more than one segment role per user_.
 </Callout>
 
+</details>
+
 ### Masking Personally Identifiable Information and Events
 
 This option allows you to mask personal information, such as Email, Phone number, Location, Gender, User properties, and other sensitive data, as well as the event activity of a user profile for a specific user role. For more information, refer to [PII Masking](https://docs.clevertap.com/docs/pii-masking).
