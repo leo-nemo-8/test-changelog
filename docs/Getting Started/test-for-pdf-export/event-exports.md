@@ -706,10 +706,10 @@ Follow these best practices to ensure your event exports are reliable, organized
         | Access Disabled  | The storage account has been locked or disabled      |
         | Bucket Not Found | The destination bucket or container no longer exists |
 
-* **Validate Exported Data**
+- **Validate Exported Data**
   Run data quality checks to confirm exported files match your expectations before loading them into downstream systems.
 
-* **Monitoring & Error Handling**: If your export fails:
+- **Monitoring & Error Handling**: If your export fails:
   - Check that your storage credentials (IAM policy, service account key, or SAS token) are valid.
   - Ensure the bucket or container exists and is accessible.
   - For GCP exports, a 403 error often indicates that the service account key is invalid.
@@ -772,14 +772,15 @@ Check that the bucket or container name matches exactly and that the IAM policy,
 
 If your export fails, follow these steps to troubleshoot the issue:
 
-_Verify your storage credentials  -  Make sure your IAM policy (AWS), service account key (GCP), or SAS token (Azure) is valid and has the required write permissions._ Check bucket or container access  -  Ensure the target bucket or container exists and is reachable from CleverTap.
-_Check for the following error codes:_ A 403 error in GCP usually indicates an invalid or expired service account key.
-\* For other platforms, refer to your cloud provider's error documentation for further guidance.
+- _Verify your storage credentials_ — Make sure your IAM policy (AWS), service account key (GCP), or SAS token (Azure) is valid and has the required write permissions.
+- _Check bucket or container access_ — Ensure the target bucket or container exists and is reachable from CleverTap.
+- _Check for the following error codes_ — A 403 error in GCP usually indicates an invalid or expired service account key.
+- For other platforms, refer to your cloud provider's error documentation for further guidance.
 
 ### What other ways can I export event data from CleverTap?
 
-\* [**Export via API**](https://developer.clevertap.com/docs/): Use the CleverTap Events API to programmatically query and download event data.
-\* [**Find People**](doc:find-people): Download user-level data directly from the CleverTap dashboard through _Segments_ > _Find People_.
+- [**Export via API**](https://developer.clevertap.com/docs/): Use the CleverTap Events API to programmatically query and download event data.
+- [**Find People**](doc:find-people): Download user-level data directly from the CleverTap dashboard through _Segments_ > _Find People_.
 
 ### What are the Campaign Type values in the new export?
 
