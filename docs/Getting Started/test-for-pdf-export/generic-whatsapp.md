@@ -73,13 +73,17 @@ These are some of the frequent issues that partners usually face when testing th
 
 Whenever a provider setting is saved in the CleverTap dashboard, we send out a [dummy messaging payload](https://docs.clevertap.com/docs/generic-whatsapp#validation-payload-1) to verify that your endpoint is up and returning a success response. If we do not receive the expected success response within one second, we display an error showing the API request and response received from your endpoint.
 
-&#x20;Failed API response
+![](https://files.readme.io/3cda454-image.png) Failed API response
 
 Partners can use the request shown in the above pop-up in Postman to debug the issue further.
 
 ## Q. Why am I unable to save the templates in the CleverTap dashboard?
 
 CleverTap validates the Template that is saved in the dashboard by trying to deliver the Template message to a dummy number. This is required to ensure that customers don't save the incorrect templates and run into issues later when creating an actual campaign. To validate the Templates, we send the payload according to the template saved to the message endpoint which is saved in provider settings. If we receive the success response from the partner's endpoint within a second, we save the templates else, we display an error showing the request body and the API response.
+
+
+<Image src="https://files.readme.io/29696e4-image.png" align="center" border={true} />
+
 
 Partners can use the request body in Postman to debug the issue in detail at their end.
 
@@ -116,7 +120,7 @@ Enable the WhatsApp Connect Add-on and contact us at [partner-integrations@cleve
 
 Before creating a campaign to target users, you must have a few users already added to your CleverTap project. If there are no users added to your project, you will see the following screen when you try to access the campaigns:
 
-&#x20; Campaigns First Time Screen
+![](https://files.readme.io/602a7cf-image.png)  Campaigns First Time Screen
 
 There are multiple ways to add users to a CleverTap project.
 
@@ -213,6 +217,10 @@ To configure the CleverTap dashboard:
 1. Navigate to _Settings_ > _Channels_ > _WhatsApp_> _WhatsApp Connect_ from the CleverTap dashboard.
 2. Click **+ Add Provider** and select Generic (Other) from the dropdown.
 
+
+<Image src="https://files.readme.io/29282ee-Whatsapp_Common_Provider_Setup.png" border={true} />
+
+
 Add a WhatsApp Provider
 
 3. Enter the following details:
@@ -236,7 +244,7 @@ Add a WhatsApp Provider
 
 7. Send a Test WhatsApp notification:
 
-&#x20; Send a Test WhatsApp Message
+![](https://files.readme.io/c384922-sendtest.png "Send a Test WhatsApp Message")  Send a Test WhatsApp Message
 
 8. Click **Save** to save the details.
 
@@ -250,7 +258,7 @@ To set up the CleverTap callbacks, share the following with your BSP account man
 - Inbound Message Callback URL
 - The WhatsApp phone number that will be used in CleverTap
 
-&#x20; Callback URLs
+![](https://files.readme.io/b61e35f-Whatsapp_provider_credentials.png)  Callback URLs
 
 ## 3. Adding Message Template
 
@@ -272,7 +280,7 @@ Imported templates must follow [Meta’s template import format](https://develop
 1. Navigate to _Settings_ > _Channels_ > _WhatsApp_ > _WhatsApp Connect_ >_+ Provider Configuration_ from the CleverTap dashboard.
 
 2. Select _Generic (other)_ from the list, and then select the **Template import setup** check box.
-   &#x20; Import Template
+   ![](https://files.readme.io/3687cd7cbba725b02a5dbe0753dc02dc11ebd53d4801e4df53197a75e2e0c0ec-2025-07-20_18-18-40.png)  Import Template
 
 3. Select _Request Type_: Select **GET** from the _Request Type_ list. This is the supported method for importing templates via an external endpoint.
 
