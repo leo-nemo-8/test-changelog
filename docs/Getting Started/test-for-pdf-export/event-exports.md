@@ -643,7 +643,7 @@ The following is a sample of the exported CSV file with all fields included:
 
 | eventName           | eventTime  | identity | all\_identities | clevertapId | Email | Phone | Name | Gender  | DOB | platform | token | make | model | appVersion | sdkVersion | osVersion | browser   | dpi | dimensions | subscriptionGroups | MSG-webpush | MSG-push | MSG-email | MSG-sms | MSG-whatsapp | wzrk\_id | Campaign type | Campaign id | wzrk\_pivot   | User Agent | Client Name | Campaign name | Campaign labels | Journey id | Journey labels | Journey Version ID | Journey name |
 | ------------------- | ---------- | -------- | --------------- | ----------- | ----- | ----- | ---- | ------- | --- | -------- | ----- | ---- | ----- | ---------- | ---------- | --------- | --------- | --- | ---------- | ------------------ | ----------- | -------- | --------- | ------- | ------------ | -------- | ------------- | ----------- | ------------- | ---------- | ----------- | ------------- | --------------- | ---------- | -------------- | ------------------ | ------------ |
-| Notification Viewed | 1780914785 | \[...]   | \[...]          | ...         | ...   |       | ...  | Unknown |     | Android  | ...   | ...  | ...   | ...        | ...        | ...       | MobileApp | ... | {...}      | {...}              | false       | true     | true      | false   | false        | ...      | Email         | ...         | wzrk\_default | ...        | ...         | ...           | \[...]          |            |                |                    |              |
+| Notification Viewed | 1780914785 | \[...]   | \[...]          | ...         | ...   |       | ...  | Unknown |     | Android  | ...   | ...  | ...   | ...        | ...        | ...       | MobileApp | ... | `{...}`    | `{...}`            | false       | true     | true      | false   | false        | ...      | Email         | ...         | wzrk\_default | ...        | ...         | ...           | \[...]          |            |                |                    |              |
 
 # Manage Export
 
@@ -787,7 +787,7 @@ If your export fails, follow these steps to troubleshoot the issue:
 The `Campaign type` field value has changed between the legacy export and the new export. The old format returned human-readable strings; the new format returns internal enum values.
 
 | Channel            | Old value             | New value           |
-| ------------------ | --------------------- | ------------------- |
+| ------------------ | ---------------------- | -------------------- |
 | Android push       | Mobile Push - Android | `Push`              |
 | iOS push           | Mobile Push - iOS     | `Push`              |
 | Windows push       | Mobile Push - Windows | `Push`              |
@@ -841,15 +841,15 @@ The old format prefixed event property columns with their type, for example `eve
 **Summary**
 
 | Aspect                     | Old export                                                 | New export                                 |
-| -------------------------- | ---------------------------------------------------------- | ------------------------------------------ |
-| Schema                     | Fixed, always-present fields                               | Configurable, only selected fields present |
-| Timestamp                  | `ts` (Long, root level)                                    | `timestamp` (Map, root level)              |
-| Identity fields            | Inside `profile{}` object                                  | Separate `identity{}` map                  |
-| Profile attributes         | Inside `profile{}` object                                  | Separate `profile{}` map                   |
-| Device info                | Fixed typed fields                                         | Flexible map, same keys                    |
-| Communication preferences  | Not present                                                | New `commPrefs{}` map                      |
-| Campaign type field        | Human-readable string (for example, Mobile Push - Android) | Enum name (for example, Push)              |
-| CSV event property headers | Prefixed (for example, `eventproperties.product_id`)       | Flat (for example, `product_id`)           |
+| -------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
+| Schema                     | Fixed, always-present fields                                | Configurable, only selected fields present |
+| Timestamp                  | `ts` (Long, root level)                                     | `timestamp` (Map, root level)              |
+| Identity fields            | Inside `profile{}` object                                   | Separate `identity{}` map                  |
+| Profile attributes         | Inside `profile{}` object                                   | Separate `profile{}` map                   |
+| Device info                | Fixed typed fields                                          | Flexible map, same keys                    |
+| Communication preferences  | Not present                                                  | New `commPrefs{}` map                      |
+| Campaign type field        | Human-readable string (for example, Mobile Push - Android)  | Enum name (for example, Push)              |
+| CSV event property headers | Prefixed (for example, `eventproperties.product_id`)        | Flat (for example, `product_id`)           |
 
 ### Can I edit an event export after creation?
 
