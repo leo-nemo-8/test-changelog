@@ -275,7 +275,6 @@ A regional marketing manager for France is assigned a role with a user property 
 
 </details>
 
-<details>
 <summary><strong>Example 2: Segment-Based Access</strong></summary>
 
 A custom role is restricted to:
