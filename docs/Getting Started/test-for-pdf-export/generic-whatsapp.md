@@ -156,11 +156,11 @@ There are multiple ways to add users to a CleverTap project.
 
    The X-CleverTap-Account-Id and X-CleverTap-Passcode authenticate the request.
 
-   | Header                 | Description                                             | Type   | Example Value                         |
-   | :--------------------- | :------------------------------------------------------ | :----- | :------------------------------------ |
-   | X-CleverTap-Account-Id | Your CleverTap Account ID                               | string | "X-CleverTap-Account-Id: ACCOUNT\_ID" |
-   | X-CleverTap-Passcode   | Your CleverTap Account Passcode.                        | string | "X-CleverTap-Passcode: PASSCODE"      |
-   | Content-Type           | Request content-type is always set to application/json. | string | "Content-Type: application/json"      |
+   | Header                 | Description                                             | Type   | Example Value                        |
+   | :--------------------- | :------------------------------------------------------ | :----- | :----------------------------------- |
+   | X-CleverTap-Account-Id | Your CleverTap Account ID                               | string | "X-CleverTap-Account-Id: ACCOUNT_ID" |
+   | X-CleverTap-Passcode   | Your CleverTap Account Passcode.                        | string | "X-CleverTap-Passcode: PASSCODE"     |
+   | Content-Type           | Request content-type is always set to application/json. | string | "Content-Type: application/json"     |
 
    Refer to the [API Authentication](https://developer.clevertap.com/docs/authentication) to obtain the header values. To understand the common queries and concerns related to CleverTap APIs, refer to [API FAQs](https://developer.clevertap.com/docs/api-faqs).
 
@@ -222,9 +222,6 @@ To configure the CleverTap dashboard:
 
 
 Add a WhatsApp Provider
-
-
-<br />
 
 3. Enter the following details:
 
@@ -640,9 +637,9 @@ CleverTap sends this payload for sending the template message notification.<br /
 | to                        | Recipient's phone number                                                  | String    | "919876543210", "+919876543210"                                                    |
 | wabaNumber                | WhatsApp Business Account number                                          | String    | "1234567890"                                                                       |
 | isTemplate                | Indicates if the message is a template                                    | Boolean   | TRUE                                                                               |
-| msgId                     | Unique identifier for the message                                         | String    | "i\|campaignID\|batchID\|j\|campaign\_variant"                                     |
-| template.namespace        | Identifier for the template in CleverTap Dashboard                        | String    | "my\_template\_namespace"                                                          |
-| template.languageCode     | Language and locale code for the template                                 | String    | "en\_US"                                                                           |
+| msgId                     | Unique identifier for the message                                         | String    | "i\|campaignID\|batchID\|j\|campaign_variant"                                      |
+| template.namespace        | Identifier for the template in CleverTap Dashboard                        | String    | "my_template_namespace"                                                            |
+| template.languageCode     | Language and locale code for the template                                 | String    | "en_US"                                                                            |
 | components.type           | Type of component, like header, body, button, and so on.                  | String    | "header", "body", "button"                                                         |
 | header.type               | Type of header like text, video, image, file, location                    | String    | "text", "video", "image", "file", "location"                                       |
 | header.text.text          | Text content for text header                                              | String    | "Hello, World!"                                                                    |
@@ -1300,7 +1297,7 @@ CleverTap will send this payload for sending the Freeform message notification.<
 | audio.mediaURL   | Media URL of the file                                                                    | [www.example.com/audio.mp3](http://www.example.com/audio.mp3)       |              |            |          |
 | file.mediaURL    | Media URL of the file                                                                    | [www.example.com/document.pdf](http://www.example.com/document.pdf) |              |            |          |
 | file.caption     | Message body                                                                             | “This is message body”                                              |              |            |          |
-| file.filename    | Title of the file                                                                        | “sample\_document.pdf”                                              |              |            |          |
+| file.filename    | Title of the file                                                                        | “sample_document.pdf”                                               |              |            |          |
 | image.mediaURL   | Media URL of the file                                                                    | [www.example.com/image.png](http://www.example.com/image.png)       |              |            |          |
 | image.caption    | Message body                                                                             | “This is message body”                                              |              |            |          |
 | video.mediaURL   | Media URL of the file                                                                    | [www.example.com/video.mp4](http://www.example.com/video.mp4)       |              |            |          |
