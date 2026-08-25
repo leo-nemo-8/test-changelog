@@ -18,7 +18,7 @@ To configure any third-party ESP using the Generic HTTP provider in your CleverT
 2. Click **+ Provider** and select _Generic HTTP_ from the _Provider_ dropdown.
 3. Enter the following provider details:
 
-<Image align="center" alt="Provider Setup" border="{true}" caption="Provider Setup" src="[https://files.readme.io/b717e7c15eec34e63788f1928b5956c2a447899d506fc88c4b34f5f9e335708b-Provider_Setup.png](https://files.readme.io/b717e7c15eec34e63788f1928b5956c2a447899d506fc88c4b34f5f9e335708b-Provider_Setup.png)"/>
+<Image align="center" alt="Provider Setup" border={true} caption="Provider Setup" src="https://files.readme.io/b717e7c15eec34e63788f1928b5956c2a447899d506fc88c4b34f5f9e335708b-Provider_Setup.png"/>
 
 <Table>
   <thead>
@@ -90,13 +90,13 @@ You can either specify one of the following types of headers:
 - **Static Headers**: In this case, you must specify fixed values. For example, `Authorization: Bearer <API_KEY>` or `Content-Type: application/json`.
 - **Dynamic Headers**: Dynamic headers let you personalize your HTTP request payload with campaign- and user-level values at send time. These placeholders are defined using the $$ prefix and are replaced with actual values during message delivery. For instance, you can include placeholders such as `$$UserName` or `$$CampaignID` in the request headers. These are dynamically populated with actual values defined during campaign setup. To learn about Dynamic Replacement Parameters, refer to [System Dynamic Replacements](/docs/generic-http#system-dynamic-replacements) and [Custom Dynamic Replacements](/docs/generic-http#custom-dynamic-replacements).
 
-<Image align="center" alt="Dynamic Headers - POST Method" border="{true}" caption="Dynamic Headers - POST Method" src="[https://files.readme.io/d0ef4f8b54b35652aa473d75739ca3adf93f92a2a9943e8e58d0c64cf4ae0279-POST_Method_-_Headers_Setup.png](https://files.readme.io/d0ef4f8b54b35652aa473d75739ca3adf93f92a2a9943e8e58d0c64cf4ae0279-POST_Method_-_Headers_Setup.png)" width="50%"/>
+<Image align="center" alt="Dynamic Headers - POST Method" border={true} caption="Dynamic Headers - POST Method" src="https://files.readme.io/d0ef4f8b54b35652aa473d75739ca3adf93f92a2a9943e8e58d0c64cf4ae0279-POST_Method_-_Headers_Setup.png" width="50%"/>
 
 In the following example, `"UserName": "$$UserName"` is a dynamic placeholder used in the payload. The part that follows the $$ (in this case, UserName) must match the key you define in the _Request Headers_ section during campaign setup.
 
 CleverTap uses this mapping to replace the placeholder with the corresponding value when sending the campaign.
 
-<Image align="center" alt="Define Parameters - Generic HTTP via POST Method" border="{true}" caption="Configure Parameters For POST Method" src="[https://files.readme.io/c0b9bbfaadecbaf2e1acdf8540659e87aa6723c40f9905c1b4c289016e99d8f6-POST_Parameters_screenshot.png](https://files.readme.io/c0b9bbfaadecbaf2e1acdf8540659e87aa6723c40f9905c1b4c289016e99d8f6-POST_Parameters_screenshot.png)" width="75%"/>
+<Image align="center" alt="Define Parameters - Generic HTTP via POST Method" border={true} caption="Configure Parameters For POST Method" src="https://files.readme.io/c0b9bbfaadecbaf2e1acdf8540659e87aa6723c40f9905c1b4c289016e99d8f6-POST_Parameters_screenshot.png" width="75%"/>
 
 When using the GET method, parameters are passed via the _Request Query Parameters_ section. This section lets you define dynamic values that CleverTap sends to the query string of your HTTP endpoint.
 
@@ -104,11 +104,11 @@ When using the GET method, parameters are passed via the _Request Query Paramete
 >
 > Do not use dynamic placeholders such as `$$HTML` or any large body content in the query string of the request. Including such content can significantly increase the URL length and may lead to request failures.
 
-<Image align="center" alt="Provider Setup for Generic HTTP - GET Method " border="{true}" caption="Provider Setup for Generic HTTP - GET Method" src="[https://files.readme.io/f3c8d0c524630d0d2bf5239af9aba583eb2e1e168427b24aef2926499b819239-image.png](https://files.readme.io/f3c8d0c524630d0d2bf5239af9aba583eb2e1e168427b24aef2926499b819239-image.png)" width="65%"/>
+<Image align="center" alt="Provider Setup for Generic HTTP - GET Method " border={true} caption="Provider Setup for Generic HTTP - GET Method" src="https://files.readme.io/f3c8d0c524630d0d2bf5239af9aba583eb2e1e168427b24aef2926499b819239-image.png" width="65%"/>
 
 In the following example, you define a value for PromoCode during campaign creation.
 
-<Image align="center" alt="Define Request Query Parameters - For GET Method" border="{true}" caption="Define Request Query Parameters - For GET Method" src="[https://files.readme.io/121117e7a212b1cdb34cdc27b8161ffad25b55b77fe96f07d01eefd4fd7b2dc0-image.png](https://files.readme.io/121117e7a212b1cdb34cdc27b8161ffad25b55b77fe96f07d01eefd4fd7b2dc0-image.png)"/>
+<Image align="center" alt="Define Request Query Parameters - For GET Method" border={true} caption="Define Request Query Parameters - For GET Method" src="https://files.readme.io/121117e7a212b1cdb34cdc27b8161ffad25b55b77fe96f07d01eefd4fd7b2dc0-image.png"/>
 
 ## Body Parameters
 
@@ -120,20 +120,13 @@ For a POST request type, these parameters are included in the request body to de
 {
   "peid": "1202159255273620968",
   "tmid": "1202159255273620968",
-  "cid": "$$CampaignID",
-  "fromName": "$$FromName",
-  "fromAddress": "$$FromAddress",
-  "to": "$$To",
-  "cc": "$$cc",
-  "bcc": "$$bcc",
-  "mid": "$$MessageID",
-  "uid": "$$userid",
-  "variables": "$$TemplateVariables",
-  "typeB": "$$HTML",
-  "plaintext": "$$Plaintext",
-  "amp": "$$AMPHTML",
-  "replyTo": "$$ReplyToAddress",
-  "tid": "$$Subject"
+  "cid": "$$CampaignID",   "fromName": "$$FromName",
+  "fromAddress": "$$FromAddress",   "to": "$$To",
+  "cc": "$$cc",   "bcc": "$$bcc",
+  "mid": "$$MessageID",   "uid": "$$userid",
+  "variables": "$$TemplateVariables",   "typeB": "$$HTML",
+  "plaintext": "$$Plaintext",   "amp": "$$AMPHTML",
+  "replyTo": "$$ReplyToAddress",   "tid": "$$Subject"
 }
 ```
 
@@ -148,35 +141,19 @@ If your provider supports batching, structure your payload as shown below. In th
   "msgs": [
     {
       "seq": 1,                        // Static parameter
-      "cid": "$$CampaignID",            
-      "type": "$$FromName",
-      "typeA": "$$FromAddress",
-      "to": "$$To",
-      "cc": "$$cc",
-      "bcc": "$$bcc",
-      "mid": "$$MessageID",
-      "uid": "$$userid",               // Dynamic custom parameter, value for userID key should be provided during campaign setup
-      "typeB": "$$HTML",
-      "plaintext": "$$Plaintext",
-      "amp": "$$AMPHTML",
-      "replyTo": "$$ReplyToAddress",
-      "tid": "$$Subject"
-    },
-    {
-      "seq": 2,
-      "cid": "$$CampaignID",
-      "type": "$$FromName",
-      "typeA": "$$FromAddress",
-      "to": "$$To",
-      "cc": "$$cc",
-      "bcc": "$$bcc",
-      "mid": "$$MessageID",
-      "uid": "$$userid",
-      "typeB": "$$HTML",
-      "plaintext": "$$Plaintext",
-      "amp": "$$AMPHTML",
-      "replyTo": "$$ReplyToAddress",
-      "tid": "$$Subject"
+      "cid": "$$CampaignID",                   "type": "$$FromName",
+      "typeA": "$$FromAddress",       "to": "$$To",
+      "cc": "$$cc",       "bcc": "$$bcc",
+      "mid": "$$MessageID",       "uid": "$$userid",               // Dynamic custom parameter, value for userID key should be provided during campaign setup
+      "typeB": "$$HTML",       "plaintext": "$$Plaintext",
+      "amp": "$$AMPHTML",       "replyTo": "$$ReplyToAddress",
+      "tid": "$$Subject"     },     {       "seq": 2,       "cid": "$$CampaignID",
+      "type": "$$FromName",       "typeA": "$$FromAddress",
+      "to": "$$To",       "cc": "$$cc",
+      "bcc": "$$bcc",       "mid": "$$MessageID",
+      "uid": "$$userid",       "typeB": "$$HTML",
+      "plaintext": "$$Plaintext",       "amp": "$$AMPHTML",
+      "replyTo": "$$ReplyToAddress",       "tid": "$$Subject"
     }
   ]
 }
@@ -190,7 +167,7 @@ If your provider supports batching, structure your payload as shown below. In th
 
 You can use the following dynamic replacements within your payload. At send time, CleverTap replaces each placeholder with the corresponding value.
 
-<Table align="{["left","left","left"]}">
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>Key</th>
@@ -290,14 +267,10 @@ Custom dynamic replacements allow you to pass additional metadata, such as user 
   "cid": "432",                            // Global Key-Value pair
   "msgs": [                               // Start of batched message array
     {
-      "from": "$$FromName",              // System Dynamic Parameter: sender display name
-      "senderaddr": "$$FromAddress",   // System Dynamic Parameter: sender email address
-      "to": "$$To",                    // System Dynamic Parameter: recipient email address
-      "mid": "$$MessageID",           // System Dynamic Parameter: unique message ID (used in callbacks)
-      "name": "$$name",             // Custom Dynamic Parameter: recipient’s name (user-level personalization)
-      "uid": "$$userID",    // Custom Dynamic Parameter: user’s ID (user-level personalization)
-      "content": "$$HTML",      // System Dynamic Parameter: HTML email body
-      "heading": "$$Subject"   // System Dynamic Parameter: email subject
+      "from": "$$FromName",              // System Dynamic Parameter: sender display name       "senderaddr": "$$FromAddress",   // System Dynamic Parameter: sender email address
+      "to": "$$To",                    // System Dynamic Parameter: recipient email address       "mid": "$$MessageID",           // System Dynamic Parameter: unique message ID (used in callbacks)
+      "name": "$$name",             // Custom Dynamic Parameter: recipient’s name (user-level personalization)       "uid": "$$userID",    // Custom Dynamic Parameter: user’s ID (user-level personalization)
+      "content": "$$HTML",      // System Dynamic Parameter: HTML email body       "heading": "$$Subject"   // System Dynamic Parameter: email subject
     }
   ]
 }
@@ -308,7 +281,7 @@ In a batching scenario, the JSON payload consists of the following two parts
 - **Global Key-Value Pairs**: Apply uniformly across the entire batch; do not support personalization. In the above example, `cid : 432` is a global key-value pair.
 - **Message-level Key-Value Pairs**: Specific to individual messages within the batch, supports personalization. In the above example, all the parameters within the `msgs` array are message body key-value pairs.
 
-<Image align="center" alt="Campaign Creation in case of Batching" border="{true}" caption="Campaign Creation in case of Batching" src="[https://files.readme.io/346263802bed10052b6054f8f53a2efc4dcd731df06783e0f6e49044bc8c9cc2-image.png](https://files.readme.io/346263802bed10052b6054f8f53a2efc4dcd731df06783e0f6e49044bc8c9cc2-image.png)"/>
+<Image align="center" alt="Campaign Creation in case of Batching" border={true} caption="Campaign Creation in case of Batching" src="https://files.readme.io/346263802bed10052b6054f8f53a2efc4dcd731df06783e0f6e49044bc8c9cc2-image.png"/>
 
 When the campaign is sent, CleverTap resolves all placeholders and sends the payload to your email service provider (refer to the following sample JSON payload):
 
@@ -347,8 +320,7 @@ The array key name (for example, `attachments`, `files`, or any other name) and 
   "attachments": [
     {
       "file_name": "$$AttachmentFileName",
-      "content_type": "$$AttachmentType",
-      "content": "$$AttachmentContent"
+      "content_type": "$$AttachmentType",       "content": "$$AttachmentContent"
     }
   ]
 }
@@ -358,124 +330,12 @@ The array key name (for example, `attachments`, `files`, or any other name) and 
 ```json 
 {
   "fromName": "$$FromName",
-  "fromAddress": "$$FromAddress",
-  "msgs": [
-    {
-      "to": "$$To",
-      "mid": "$$MessageID",
-      "subject": "$$Subject",
-      "html": "$$HTML",
-      "files": [
-        {
-          "file_name": "$$AttachmentFileName",
-          "content_type": "$$AttachmentType",
-          "content": "$$AttachmentContent"
+  "fromAddress": "$$FromAddress",   "msgs": [     {       "to": "$$To",
+      "mid": "$$MessageID",       "subject": "$$Subject",
+      "html": "$$HTML",       "files": [         {           "file_name": "$$AttachmentFileName",
+          "content_type": "$$AttachmentType",           "content": "$$AttachmentContent"
         }
       ]
     }
   ]
 }
-```
-
-> 🚧 Important
->
-> - Attachments are supported only when the **Request Type** is set to **POST**.
-> - The provider endpoint must accept a JSON payload with **base64-encoded attachment content** as a string.
-
-# Set Up Callbacks
-
-CleverTap enables real-time tracking of delivery status and user interactions, such as bounces, unsubscribes, spam reports, and clicks, through HTTP callbacks sent to CleverTap's Callback URL displayed during provider setup.
-
-During provider setup, you must include a key in your outgoing payload (for example, `mid`) with `$$MessageID` as its value. CleverTap replaces this dynamic placeholder with a unique identifier for each message sent. This identifier must be returned in the callback payload to allow CleverTap to attribute the callback to the appropriate campaign and user profile.
-
-## Sample Callback Request
-
-The following is an example payload structure of a callback request that can be sent to the CleverTap callback URL:
-
-```json
-{
-  "version": "v2",
-  "events": {
-    "success": [
-      {
-        "type": "delivered",	//Indicates the message was delivered to the intended recipient 
-        "email": "user@example.com",	//recipient email address
-        "meta": "user4@example.com|1568798080|1730799638|20241105|0|wzrk_default|-17005910|"
-      }
-    ],
-    "failed": [ 
-      {
-        "type": "unsubscribed", // Indicates the user has unsubscribed		
-        "email": "user1@example.com",		// The email address of the affected user
-        "meta": "user1@example.com|1568798080|1730714617|20241104|0|wzrk_default|-17005907|",
-        "description": "User Unsubscribed"
-      },
-      {
-        "type": "hard_bounce",
-        "email": "user3@example.com",
-        "meta": "user3@example.com|1568798080|1730799638|20241105|0|wzrk_default|-17005910|",
-        "description": "Hard bounce detected"
-      },
-      {
-        "type": "soft_bounce",
-        "email": "user5@example.com",
-        "meta": "usert5@example.com|1568798080|1730714617|20241104|0|wzrk_default|-17005905|",
-        "description": "Recipient Inbox Full"
-      },
-      {
-        "type": "spam",
-        "email": "user4@example.com",
-        "meta": "user4@example.com|1568798080|1730714617|20241104|0|wzrk_default|-17005904|",
-        "description": "Marked as spam"
-      }
-    ]
-  }
-}
-```
-
-Ensure your callback payload includes the following keys:
-
-| keys          | Description                                                                                                                                                                                                                                                                         | Required |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `version`     | Indicates the version of the callback payload schema. Must be set to `v2`.                                                                                                                                                                                                          | Yes      |
-| `type`        | Type of event for tracing user engagement (for example, `delivered`, `clicked`, `hard_bounce`, `unsubscribed`).                                                                                                                                                                     | Yes      |
-| `email`       | Recipient email address.                                                                                                                                                                                                                                                            | Yes      |
-| `meta`        | Required for delivery tracking (DLR). CleverTap sends a unique identifier in place of `$$MessageID` for every outgoing message. The ESP must return this exact identifier in the `meta` field of the callback payload. This ensures CleverTap correctly attributes the event to the corresponding user and campaign | Yes      |
-| `description` | An optional description about the event.                                                                                                                                                                                                                                            | No       |
-
-## Incoming Payload Mapping to System Events
-
-CleverTap maps the incoming payloads with their respective system events. You can view these on the CleverTap dashboard.
-
-| Callback Type  | Maps to CleverTap System Event | Sample Payload Structure |
-| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `delivered`    | Maps to the Notification Delivered system event. The event property _CT Source_ specifies the email provider used to send the campaign, for example, `Generic email` indicates that the campaign was sent using a generic email provider configuration.                                                                                                    | `{"type": "delivered", "email": "user@example.com", "timestamp": 1425744000, "meta": "..."}`                                                                         |
-| `hard_bounce`  | Maps to the Notification Failed system event and also raises a Channel Unsubscribed event. The user is unsubscribed from future email campaigns. The `description` key in the callback payload is mapped to:<li>The _Error_ event property in the Notification Failed event.</li><li>The _Type_ event property in the Channel Unsubscribed event.</li> | `{"type": "hard_bounce", "email": "user@example.com", "meta": "...", "description": "Invalid recipient address"}`                                                    |
-| `soft_bounce`  | Maps to the Notification Failed system event. The `description` key is mapped to the _error_ event property. In this case, the user is not unsubscribed from future email campaigns.                                                                                                                                                                   | `{"type": "soft_bounce", "email": "user@example.com", "meta": "...", "description": "Soft bounce detected"}`                                                         |
-| `unsubscribed` | Maps to the Channel Unsubscribed system event. The `description` key is mapped to the _Type_ event property. Also, the user is unsubscribed from future email campaigns.                                                                                                                                                                               | `{"type": "unsubscribed", "email": "user@example.com", "meta": "...", "description": "User unsubscribed"}`                                                           |
-| `spam`         | Maps to the Channel Unsubscribed system event. The `description` key is mapped to the _Type_ event property. Also, the user is unsubscribed from future email campaigns.                                                                                                                                                                               | `{"type": "spam", "email": "user@example.com", "meta": "...", "description": "Spam detected"}`                                                                       |
-| `clicked`      | Maps to the Notification Clicked system event. You must use this only if you are not using CleverTap's default click tracking (to avoid duplicate click numbers).                                                                                                                                                                                      | `{"type": "clicked", "email": "user@example.com", "meta": "...", "description": "Link clicked"}`                                                                     |
-
-## Response Codes
-
-CleverTap sends the following status codes and descriptions as a response to the ESP upon receiving callbacks:
-
-| Status Code | Error Message                                      | Description                                                                                                          |
-| ----------- | :------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 200         |                                                    | Callback received and processed.                                                                                     |
-| 400         | Bad request. Some mandatory parameter was missing. | Occurs when any of the mandatory keys are missing from the payload or when there are issues with the payload format. |
-| 5xx         | Server error                                       | CleverTap internal server error. Contact CleverTap support if the issue persists.                                    |
-
-The following is the sample response sent by CleverTap to the provider upon processing the callback payload successfully:
-
-```json
-{
-  "TOTAL_EVENTS": 4,
-  "PROCESSED_EVENTS": 4,
-  "UNPROCESSED_EVENTS": []
-}
-```
-
-> 📘 Retry Mechanism for Errors
->
-> In case of HTTP 5XX errors, we recommend retrying after 10 minutes with exponential backoff as CleverTap does not deduplicate requests.
