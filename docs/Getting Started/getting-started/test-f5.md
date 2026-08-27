@@ -5,12 +5,11 @@ hidden: false
 metadata:
   robots: index
 ---
-
 # Custom Fields (Beta)
 
 Custom fields let you add your own typed attributes to candidate profiles, on top
 of the built-in ones. You define each field once for your organization, choosing
-its type and (optionally) a fixed set of allowed values.
+its type and (optionally) a fixed set of allowed [values](https://leotest-gtwu.readme.io/docs/test-3#prerequisites).
 
 ## Availability
 
