@@ -1,7 +1,9 @@
 ---
 title: 'test 1 '
 deprecated: false
-hidden: false
+hidden: true
+link:
+  new_tab: false
 metadata:
   robots: index
 ---
@@ -207,6 +209,7 @@ test text /e
 
 
   <Image src="https://files.readme.io/3cd6c2b839363203c829f5814cf8e4954e47bfd680e969e9d027d4a03487c6e7-add_template_22.png" align="center" border={true} />
+
 
 - **Activate Later** - Create the template. After selecting the **Activate Later** option, the status of the template will be **Created**. You can send the template for approval later. For more information, see [Send Template for Approval](https://developers.kaleyra.io/docs/rcs-send-template-for-approval).
 
