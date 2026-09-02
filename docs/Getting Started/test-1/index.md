@@ -3,7 +3,8 @@ title: 'test 1 '
 deprecated: false
 hidden: true
 link:
-  new_tab: false
+  new_tab: true
+  url: https://docs.netcoreunbxd.com/docs/getting-started
 metadata:
   robots: index
 ---
