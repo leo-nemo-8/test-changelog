@@ -1,7 +1,7 @@
 ---
 title: test mdx
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

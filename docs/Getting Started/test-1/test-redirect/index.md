@@ -1,7 +1,7 @@
 ---
 title: redirect
 deprecated: false
-hidden: false
+hidden: true
 link:
   new_tab: true
   url: https://leotest-gtwu.readme.io/docs/test-cards

@@ -1,7 +1,7 @@
 ---
 title: test sub-heading
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

@@ -1,7 +1,7 @@
 ---
 title: test FilterableParamTable
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

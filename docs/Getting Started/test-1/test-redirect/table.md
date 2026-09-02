@@ -1,7 +1,7 @@
 ---
 title: Table
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

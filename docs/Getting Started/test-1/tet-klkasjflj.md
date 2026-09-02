@@ -1,7 +1,7 @@
 ---
 title: tet klkasjflj
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

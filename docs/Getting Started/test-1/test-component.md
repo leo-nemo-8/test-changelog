@@ -1,7 +1,7 @@
 ---
 title: test component
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
