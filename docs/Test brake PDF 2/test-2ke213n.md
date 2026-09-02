@@ -5,4 +5,12 @@ hidden: false
 metadata:
   robots: index
 ---
-qlflkangklsnklfjwqlkd<br />Fklsngjklsr
+<br />
+
+<iframe
+  src="https://example.com/forms/contact"
+  title="Contact form"
+  width="100%"
+  height="700"
+  style={{ border: 0 }}
+></iframe>
