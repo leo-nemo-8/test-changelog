@@ -16,7 +16,7 @@ There are two ways of parsing the spreadsheet:
 
 When modeling is ready, then parsing and committing the models to RTDB is easier.
 
-<img src="https://files.readme.io/69fcc16-parse_button.png" alt="Parse button in Excel application" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/69fcc16-parse_button.png" alt="Parse button in Excel application" align="center" />
 
 # Modeling
 
@@ -25,7 +25,7 @@ The modeling format is simple as everything is tables. There are two kinds of ta
 - **Model table:** The model table describes the model's properties and its relationship with other models.
 - **Instance table:** Instance table is a list of instances of a model.
 
-<img src="https://files.readme.io/a784eca-ExcelPopulateFlowCmd.png" alt="Flow Chart" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/a784eca-ExcelPopulateFlowCmd.png" alt="Flow Chart" align="center" />
 
 To distinguish between model table and instance table, three keywords are reserved: **Class**, **AbstractClass** and **Instance**. If a header has **Class** or **AbstractClass** that means the table is model, and **Instance** means instance table. **AbstractClass** is a **Class** with Abstract attribute set to true.
 
@@ -42,7 +42,7 @@ For this model we have defined:
 
 ## Model table
 
-<img src="https://files.readme.io/dc0a926-simple_tank_model.png" alt="Simple Tank Model Table from Excel" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/dc0a926-simple_tank_model.png" alt="Simple Tank Model Table from Excel" align="center" />
 
 As the tables show, only level property will be historized, collected. The table could have many more properties, e.g.  EquipmentPropertyInfo , for example _Category_, _ReferenceTarget_, _Unit_, _ValueMax_, _ValueMin_, etc. But for example purposes, we want to keep this simple.
 
@@ -53,7 +53,7 @@ As the tables show, only level property will be historized, collected. The table
 
 ## Instance table
 
-<img src="https://files.readme.io/394aa8f-simple_tank_instance_table.PNG" alt="Simple Tank Instance Table from Excel" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/394aa8f-simple_tank_instance_table.PNG" alt="Simple Tank Instance Table from Excel" align="center" />
 
 ## Parsing Model and Instance Table
 
@@ -123,7 +123,7 @@ or locally:
 
 The result can be visualized in Engineering UI:
 
-<img src="https://files.readme.io/baf05c2-simple_tank.png" alt="Tank and its properties in Engineering UI" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/baf05c2-simple_tank.png" alt="Tank and its properties in Engineering UI" align="center" />
 
 A model-table can inherit properties from another model-table by appending _: \<base table name>_. For example: _Class : Tank : Mechanical device_, means _Tank_ inherits all properties from _Mechanical device_.
 
@@ -188,7 +188,7 @@ Instances are listed under Path\_\<model name>, their locations in Equipment Mod
 
 After committing the JSON file, we will get the following Equipment Model:
 
-<img src="https://files.readme.io/1c15be3-simple_tank_instances.png" alt="After has committed JSON to database." style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/1c15be3-simple_tank_instances.png" alt="After has committed JSON to database." align="center" />
 
 ### Good to know
 
@@ -201,7 +201,7 @@ After committing the JSON file, we will get the following Equipment Model:
 
 # Water Pump System Example
 
-<img src="https://files.readme.io/9c44951-ExampleMode.png" alt="[Water Pump System](https://github.com/cpmPlus/Examples/blob/master/EquipmentModelBulkLoadTool/WaterPumpSystem.xlsx)" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/9c44951-ExampleMode.png" alt="Water Pump System" align="center" />
 
 ## Defining the model
 
@@ -513,7 +513,7 @@ The generated JSON is a bit longer. The complete water system model is ready to 
 
 Included model setup image below, so users can compare with.
 
-<img src="https://files.readme.io/c66f601-creating_parse_button_in_excel.png" alt="Setup for a parsing button" style={{maxWidth: '100%', margin: '0 auto'}} />
+<Image src="https://files.readme.io/c66f601-creating_parse_button_in_excel.png" alt="Setup for a parsing button" align="center" />
 
 # Exporting Tutorials
 
