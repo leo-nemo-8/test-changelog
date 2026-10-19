@@ -1,7 +1,7 @@
 ---
 title: test 2
 author: Leonid Nemolovskyi
-hidden: true
+hidden: false
 published_at: '2026-08-27T11:59:06.536Z'
 ---
 <HTMLBlock>{`
